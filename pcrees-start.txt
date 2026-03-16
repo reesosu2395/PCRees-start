@@ -7,7 +7,7 @@
     <title>PC Rees-Start | Professional Computer Repair</title>
     <style>
         /* CSS Styles */
-        :root {
+        :root { index.html
             --primary-blue: #1A365D;
             --accent-green: #38A169;
             --light-bg: #F7FAFC;
