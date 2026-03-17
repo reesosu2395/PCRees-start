@@ -41,7 +41,7 @@
         }
 
         .header-logo {
-            height: 60px; /* Adjust size as needed */
+            height: 60px; 
             width: auto;
             display: block;
         }
@@ -173,6 +173,42 @@
             line-height: 1.8;
         }
 
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-left: 5px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 25px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #4A5568;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .stars {
+            color: #ECC94B; /* Gold color for stars */
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
         /* Footer / Contact */
         footer {
             background-color: #2D3748;
@@ -270,6 +306,27 @@
     <section id="about" class="about-box">
         <h2>Expertise You Can Trust</h2>
         <p>Hi, I'm <strong>Rees Nelson</strong>. I hold a Bachelor's degree in Information Technology and have over 4 years of professional IT experience. When you hand over your computer, you aren't giving it to a hobbyist—you're getting enterprise-level troubleshooting and data privacy handled by a certified professional right here in your neighborhood.</p>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2>What My Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Rees completely saved my laptop! It was running so slow I thought I had to buy a new one, but he upgraded the drive and it runs faster than when I bought it."</p>
+                <p class="testimonial-author">- Sarah M.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Super professional and fast. He removed a nasty virus off my family computer and made sure all our photos were backed up safely. Highly recommend PC Rees-Start!"</p>
+                <p class="testimonial-author">- David L.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Honest pricing and great communication. Rees explained exactly what was wrong with my custom PC build and had the replacement part installed in no time."</p>
+                <p class="testimonial-author">- Jason T.</p>
+            </div>
+        </div>
     </section>
 
     <footer id="contact">
