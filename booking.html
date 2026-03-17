@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Repair | PC Rees-Start</title>
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --accent-green: #38A169;
+            --light-bg: #F7FAFC;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: var(--light-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.8rem; font-weight: bold; text-decoration: none; color: white; }
+        .logo span { color: var(--accent-green); }
+
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+
+        .booking-section {
+            flex: 1;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        h1 { color: var(--primary-blue); }
+
+        /* The Calendar Container */
+        .calendar-embed {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+            min-height: 700px;
+            width: 100%;
+            border: 1px solid #E2E8F0;
+        }
+
+        footer {
+            background-color: #2D3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">PC <span>Rees-Start</span></a>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="quote.html">Get Quote</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="booking-section">
+        <h1>Schedule Your Repair</h1>
+        <p>Select a time that works for you. I'll confirm via text or email.</p>
+        
+        <div class="calendar-embed">
+            <iframe src="https://calendly.com/YOUR_LINK?hide_event_type_details=1&hide_gdpr_banner=1" 
+                    width="100%" height="700" frameborder="0"></iframe>
+        </div>
+        </section>
+
+    <footer>
+        <p>&copy; 2026 PC Rees-Start. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
