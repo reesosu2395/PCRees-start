@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote | PC Rees-Start</title> 
+    <style>
+        /* Shared CSS Styles */
+        :root {
+            --primary-blue: #1A365D;
+            --accent-green: #38A169;
+            --light-bg: #F7FAFC;
+            --dark-text: #2D3748;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--accent-green);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Form Container */
+        .quote-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-green);
+            flex: 1;
+        }
+
+        .quote-container h1 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .quote-container p {
+            text-align: center;
+            color: #4A5568;
+            margin-bottom: 2rem;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #CBD5E0;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .btn {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #2F855A;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2D3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: auto;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .quote-container {
+                margin: 2rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">PC <span>Rees-Start</span></a>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="quote-container">
+        <h1>Get Your Free Quote</h1>
+        <p>Tell me a little bit about what's going on with your computer, and I'll get back to you shortly.</p>
+        
+        <form action="https://formsubmit.co/reesosu@gmail.com" method="POST">
+            
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New PC Rees-Start Quote Request!">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="Name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Cell Phone Number</label>
+                <input type="tel" id="phone" name="Phone" required placeholder="(405) 555-1234">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Issue Description</label>
+                <textarea id="description" name="Description" required placeholder="My laptop is running really slow and makes a clicking noise..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Request</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PC Rees-Start. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
