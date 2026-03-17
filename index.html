@@ -7,30 +7,42 @@
     <title>PC Rees-Start | Professional Computer Repair</title> 
     <style>
         /* CSS Styles */
-        :root {
-            --primary-blue: #1A365D;
-            --accent-green: #38A169;
-            --light-bg: #F7FAFC;
-            --dark-text: #2D3748;
-        }
+        :root {/* Header Logo Styling */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--dark-text);
-            line-height: 1.6;
-        }
+.header-logo {
+    height: 60px; /* Adjust this to make your logo larger or smaller */
+    width: auto;
+    display: block;
+}
 
-        /* Navigation */
-        header {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* Updated Nav Button for consistency */
+.nav-btn {
+    background-color: var(--accent-green);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Adjusting header padding for the image */
+header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0.5rem 5%; /* Slightly less padding to let the logo shine */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
         .logo {
             font-size: 1.8rem;
@@ -164,12 +176,14 @@
 </head>
 <body>
 
- <header>
-    <div class="logo">PC <span>Rees-Start</span></div>
+<header>
+    <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="PC Rees-Start Logo" class="header-logo">
+    </a>
     <nav>
         <a href="#services">Services</a>
         <a href="quote.html">Get Quote</a>
-        <a href="booking.html" style="background: var(--accent-green); padding: 8px 16px; border-radius: 5px;">Book Now</a>
+        <a href="booking.html" class="nav-btn">Book Now</a>
     </nav>
 </header>
     </header>
