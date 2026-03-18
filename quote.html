@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote | PC Rees-Start</title> 
     <style>
-        /* Shared CSS Styles */
+        /* CSS Styles */
         :root {
-            --primary-blue: #1A365D;
-            --accent-green: #38A169;
-            --light-bg: #F7FAFC;
+            --primary-black: #111111;
+            --accent-orange: #FF6B00;
+            --light-bg: #FFFFFF;
             --dark-text: #2D3748;
+            --gray-border: #E2E8F0;
         }
 
         body {
@@ -25,9 +26,9 @@
             min-height: 100vh;
         }
 
-        /* Navigation Fixes */
+        /* Navigation */
         header {
-            background-color: var(--primary-blue);
+            background-color: var(--primary-black);
             color: white;
             padding: 0.8rem 5%;
             display: flex;
@@ -62,11 +63,11 @@
         }
 
         nav a:hover {
-            color: var(--accent-green);
+            color: var(--accent-orange);
         }
 
         .nav-btn {
-            background-color: var(--accent-green);
+            background-color: var(--accent-orange);
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -78,89 +79,97 @@
             transform: scale(1.05);
         }
 
-        /* Form Container */
-        .quote-container {
-            max-width: 600px;
-            margin: 4rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent-green);
+        /* Form Section */
+        .page-content {
             flex: 1;
-        }
-
-        .quote-container h1 {
-            color: var(--primary-blue);
-            margin-top: 0;
-            text-align: center;
-        }
-
-        .quote-container p {
-            text-align: center;
-            color: #4A5568;
-            margin-bottom: 2rem;
-        }
-
-        /* Form Elements */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--primary-blue);
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
+            padding: 4rem 5%;
+            max-width: 800px;
+            margin: 0 auto;
             width: 100%;
-            padding: 10px;
-            border: 1px solid #CBD5E0;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
             box-sizing: border-box;
         }
 
-        textarea {
-            resize: vertical;
-            height: 120px;
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .btn {
-            background-color: var(--accent-green);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            display: block;
-            text-align: center;
+        .page-header h1 {
+            color: var(--primary-black);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #4A5568;
             font-size: 1.1rem;
         }
 
-        .btn:hover {
-            background-color: #2F855A;
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-orange);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--primary-black);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #CC5500;
         }
 
         /* Footer */
         footer {
-            background-color: #2D3748;
+            background-color: #000000;
             color: white;
             text-align: center;
             padding: 2rem 5%;
             margin-top: auto;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -171,9 +180,8 @@
                 flex-direction: column;
                 width: 100%;
             }
-            nav a {
-                margin: 10px 0;
-            }
+            nav a { margin: 10px 0; }
+            .form-container { padding: 20px; }
         }
     </style>
 </head>
@@ -185,50 +193,55 @@
         </a>
         <nav>
             <a href="index.html#services">Services</a>
-            <a href="quote.html">Get Quote</a>
+            <a href="quote.html" style="color: var(--accent-orange);">Get Quote</a>
             <a href="booking.html" class="nav-btn">Book Now</a>
         </nav>
     </header>
 
-    <div class="quote-container">
-        <h1>Get Your Free Quote</h1>
-        <p>Tell me a little bit about what's going on with your computer, and I'll get back to you shortly.</p>
-        
-        <form action="https://formsubmit.co/reesosu@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New PC Rees-Start Quote Request!">
+    <main class="page-content">
+        <div class="page-header">
+            <h1>Request a Free Estimate</h1>
+            <p>Tell me what's going on with your device, and I'll get back to you with a transparent quote.</p>
+        </div>
 
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="Name" required placeholder="John Doe">
-            </div>
+        <div class="form-container">
+            <form onsubmit="event.preventDefault(); window.location.href='https://www.youtube.com/';">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required placeholder="john@example.com">
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="Email" required placeholder="john@example.com">
-            </div>
+                <div class="form-group">
+                    <label for="device">Device Type</label>
+                    <select id="device" class="form-control" required>
+                        <option value="" disabled selected>Select your device...</option>
+                        <option value="desktop">Windows Desktop PC</option>
+                        <option value="laptop">Windows Laptop</option>
+                        <option value="mac">MacBook / iMac</option>
+                        <option value="other">Other / Not Sure</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="phone">Cell Phone Number</label>
-                <input type="tel" id="phone" name="Phone" required placeholder="(405) 308-3066">
-            </div>
+                <div class="form-group">
+                    <label for="issue">Describe the Issue</label>
+                    <textarea id="issue" class="form-control" required placeholder="e.g., My computer is running very slow and makes a loud clicking noise..."></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="description">Issue Description</label>
-                <textarea id="description" name="Description" required placeholder="My laptop is running really slow and makes a clicking noise..."></textarea>
-            </div>
-
-            <button type="submit" class="btn">Send Request</button>
-        </form>
-    </div>
+                <button type="submit" class="submit-btn">Send Quote Request</button>
+            </form>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 PC Rees-Start. All rights reserved.</p>
+        <p style="font-size: 0.85rem; color: #A0AEC0;">
+            &copy; 2026 PC Rees-Start. All rights reserved. | (405) 308-3066
+        </p>
     </footer>
 
 </body>
 </html>
-
-
-
-
