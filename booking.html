@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2;url=https://calendly.com/reesosu">
+    <title>Book a Service | PC Rees-Start</title> 
+    <style>
+        :root {
+            --primary-black: #111111;
+            --accent-orange: #FF6B00;
+            --light-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .container { padding: 40px; max-width: 500px; }
+        
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--accent-orange);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        h1 { color: var(--primary-black); margin-bottom: 10px; }
+        p { color: #4A5568; margin-bottom: 30px; }
+
+        .btn {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <h1>Redirecting to Booking...</h1>
+        <p>Taking you to the calendar. If you aren't redirected in a few seconds, click the button below.</p>
+        <a href="https://calendly.com/reesosu" class="btn">Open Calendar</a>
+    </div>
+</body>
+</html>
