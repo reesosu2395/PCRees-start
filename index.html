@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Rees-Start | Professional Computer Repair</title> 
+    <title>PC Rees-Start | IT Consulting & Strategic Solutions</title> 
     <style>
         /* CSS Styles */
         :root {
-            --primary-black: #111111; /* Replaced the blue */
-            --accent-orange: #FF6B00; /* Replaced the green */
-            --light-bg: #FFFFFF;      /* Crisp white background */
+            --primary-black: #111111; 
+            --accent-orange: #FF6B00; 
+            --light-bg: #FFFFFF;      
             --dark-text: #2D3748;
+            --soft-gray: #F7FAFC;
         }
 
         body {
@@ -31,6 +32,9 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo-link {
@@ -40,7 +44,7 @@
         }
 
         .header-logo {
-            height: 60px; 
+            height: 50px; 
             width: auto;
             display: block;
         }
@@ -77,21 +81,22 @@
 
         /* Hero Section */
         .hero {
-            background-color: white;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072') center/cover;
             text-align: center;
-            padding: 6rem 20px;
+            padding: 8rem 20px;
             border-bottom: 4px solid var(--accent-orange);
         }
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--primary-black);
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
+            font-size: 1.4rem;
+            max-width: 800px;
             margin: 0 auto 40px auto;
             color: #4A5568;
         }
@@ -99,22 +104,24 @@
         .cta-btn {
             background-color: var(--accent-orange);
             color: white;
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border-radius: 5px;
             font-weight: bold;
             transition: background 0.3s ease;
             display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .cta-btn:hover {
-            background-color: #CC5500; /* A darker shade of orange for hover */
+            background-color: #CC5500;
         }
 
         /* Section Formatting */
         .section {
-            padding: 5rem 5%;
+            padding: 6rem 5%;
             max-width: 1200px;
             margin: auto;
         }
@@ -123,14 +130,14 @@
             text-align: center;
             font-size: 2.5rem;
             color: var(--primary-black);
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
         /* Services Grid */
         .services-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
             justify-content: center;
         }
 
@@ -138,38 +145,40 @@
             background: white;
             border: 1px solid #E2E8F0;
             border-radius: 12px;
-            padding: 30px;
+            padding: 40px 30px;
             width: 280px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            border-color: var(--accent-orange);
         }
 
         .service-card h3 {
             color: var(--primary-black);
             font-size: 1.4rem;
+            margin-bottom: 15px;
         }
 
         /* About Section */
         .about-box {
             background-color: var(--primary-black);
             color: white;
-            padding: 4rem 10%;
+            padding: 5rem 10%;
             text-align: center;
-            margin: 2rem 0;
         }
 
         .about-box h2 { color: white; margin-bottom: 1.5rem; }
 
         .about-box p {
-            font-size: 1.1rem;
-            max-width: 800px;
+            font-size: 1.2rem;
+            max-width: 900px;
             margin: 0 auto;
             line-height: 1.8;
+            opacity: 0.9;
         }
 
         /* Testimonials Section */
@@ -182,38 +191,33 @@
         }
 
         .testimonial-card {
-            background: white;
-            border-left: 5px solid var(--accent-orange);
+            background: var(--soft-gray);
+            border-top: 5px solid var(--accent-orange);
             border-radius: 8px;
-            padding: 25px;
-            width: 300px;
+            padding: 30px;
+            width: 320px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: left;
         }
 
         .testimonial-text {
             font-style: italic;
             color: #4A5568;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
         }
 
         .testimonial-author {
             font-weight: bold;
             color: var(--primary-black);
-        }
-
-        .stars {
-            color: #ECC94B; /* Kept gold color for stars as it contrasts well */
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+            display: block;
         }
 
         /* Footer / Contact */
         footer {
-            background-color: #000000; /* Solid black footer */
+            background-color: #000000;
             color: white;
             text-align: center;
-            padding: 4rem 5% 2rem 5%;
+            padding: 5rem 5% 2rem 5%;
         }
 
         .footer-grid {
@@ -233,11 +237,13 @@
         .footer-col h3 {
             border-bottom: 2px solid var(--accent-orange);
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
         }
 
         .contact-info p, .hours-info p {
-            margin: 8px 0;
+            margin: 12px 0;
             font-size: 1rem;
         }
 
@@ -245,7 +251,7 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                padding: 1rem;
+                padding: 1.5rem;
             }
             nav {
                 margin-top: 20px;
@@ -255,9 +261,8 @@
             nav a {
                 margin: 10px 0;
             }
-            .hero h1 { font-size: 2.5rem; }
-            .footer-grid { text-align: center; }
-            .footer-col h3 { border-bottom: none; text-decoration: underline; text-decoration-color: var(--accent-orange); }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -268,62 +273,59 @@
             <img src="logo.png" alt="PC Rees-Start Logo" class="header-logo">
         </a>
         <nav>
-            <a href="#services">Services</a>
-            <a href="quote.html">Get Quote</a>
-            <a href="booking.html" class="nav-btn">Book Now</a>
+            <a href="#solutions">Solutions</a>
+            <a href="quote.html">Inquiry</a>
+            <a href="booking.html" class="nav-btn">Schedule Consultation</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Don't Replace It. <br>Rees-Start It.</h1>
-        <p>Professional, reliable, and secure computer repair services. Stop dealing with slow loading times, viruses, or broken hardware.</p>
-        <a href="quote.html" class="cta-btn">Get a Free Quote Today</a>
+        <h1>Empowering Your Business <br>Through Strategic IT.</h1>
+        <p>Expert-led consulting to optimize your infrastructure, secure your data, and scale your technology for the modern landscape.</p>
+        <a href="quote.html" class="cta-btn">Request a Strategy Session</a>
     </section>
 
-    <section id="services" class="section">
-        <h2>How I Can Help</h2>
+    <section id="solutions" class="section">
+        <h2>Strategic IT Solutions</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>⚡ Speed & Upgrades</h3>
-                <p>Is your computer taking ages to boot? A quick SSD upgrade can make a 5-year-old laptop feel brand new.</p>
+                <h3>🚀 Infrastructure Design</h3>
+                <p>Scaling up? We design robust network and hardware architectures tailored to your specific business growth goals.</p>
             </div>
             <div class="service-card">
-                <h3>🛡️ Virus Removal</h3>
-                <p>Complete system sweeps to remove malicious software and secure your personal data.</p>
+                <h3>🔒 Cybersecurity Audit</h3>
+                <p>Protect your intellectual property with comprehensive vulnerability assessments and threat mitigation strategies.</p>
             </div>
             <div class="service-card">
-                <h3>🔧 Hardware Repair</h3>
-                <p>Screen replacements, battery swaps, and custom PC building or diagnostics.</p>
+                <h3>☁️ Cloud Integration</h3>
+                <p>Transition your workflow to the cloud seamlessly. We manage migrations to Azure, AWS, or Google Workspace.</p>
             </div>
             <div class="service-card">
-                <h3>💾 Data Recovery</h3>
-                <p>Accidentally deleted files or a failing drive? Let's rescue your important documents and photos.</p>
+                <h3>📊 Managed IT Advisory</h3>
+                <p>Ongoing technical leadership for businesses that need a Virtual CIO without the executive overhead.</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about-box">
-        <h2>Expertise You Can Trust</h2>
-        <p>Hi, I'm <strong>Rees Nelson</strong>. I hold a Bachelor's degree in Information Technology and have over 4 years of professional IT experience. When you hand over your computer, you aren't giving it to a hobbyist—you're getting enterprise-level troubleshooting and data privacy handled by a certified professional right here in your neighborhood.</p>
+        <h2>Enterprise Expertise, Locally Delivered</h2>
+        <p>Hi, I'm <strong>Rees Nelson</strong>. With a Bachelor's in Information Technology and over 4 years of professional experience, I help businesses move beyond simple "repairs" into proactive technology management. I bridge the gap between complex technical requirements and your bottom line, ensuring your IT is an asset, not a liability.</p>
     </section>
 
     <section id="testimonials" class="section">
-        <h2>What My Clients Say</h2>
+        <h2>Client Success Stories</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Rees completely saved my laptop! It was running so slow I thought I had to buy a new one, but he upgraded the drive and it runs faster than when I bought it."</p>
-                <p class="testimonial-author">- Sarah M.</p>
+                <p class="testimonial-text">"Rees transformed our office network. We went from constant downtime to a seamless, high-speed environment. His strategic approach is invaluable."</p>
+                <span class="testimonial-author">- Sarah M., Operations Manager</span>
             </div>
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Super professional and fast. He removed a nasty virus off my family computer and made sure all our photos were backed up safely. Highly recommend PC Rees-Start!"</p>
-                <p class="testimonial-author">- David L.</p>
+                <p class="testimonial-text">"The cybersecurity audit Rees performed opened our eyes to several risks. We feel much more secure knowing our client data is protected."</p>
+                <span class="testimonial-author">- David L., Professional Services</span>
             </div>
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Honest pricing and great communication. Rees explained exactly what was wrong with my custom PC build and had the replacement part installed in no time."</p>
-                <p class="testimonial-author">- Jason T.</p>
+                <p class="testimonial-text">"Professional, articulate, and highly skilled. He doesn't just fix problems; he implements solutions that prevent them from happening again."</p>
+                <span class="testimonial-author">- Jason T., Business Owner</span>
             </div>
         </div>
     </section>
@@ -331,21 +333,21 @@
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-col contact-info">
-                <h3>Contact Me</h3>
-                <p>📞 <strong>Phone:</strong> (405) 308-3066</p>
+                <h3>Get In Touch</h3>
+                <p>📞 <strong>Direct:</strong> (405) 308-3066</p>
                 <p>✉️ <strong>Email:</strong> reesosu@gmail.com</p>
-                <p>📍 <strong>Location:</strong> Piedmont, Oklahoma</p>
+                <p>📍 <strong>Base:</strong> Piedmont, Oklahoma</p>
             </div>
             <div class="footer-col hours-info">
-                <h3>Hours of Operation</h3>
-                <p><strong>Mon - Fri:</strong> 8:00 AM - 9:00 PM</p>
-                <p><strong>Sat - Sun:</strong> 8:00 AM - 4:00 PM</p>
-                <p><em>*Drop-offs and house calls available.</em></p>
+                <h3>Consulting Hours</h3>
+                <p><strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM</p>
+                <p><strong>Saturday:</strong> By Appointment</p>
+                <p><em>*Available for on-site audits and remote support.</em></p>
             </div>
         </div>
         
         <p style="font-size: 0.85rem; color: #A0AEC0; border-top: 1px solid #4A5568; padding-top: 2rem;">
-            &copy; 2026 PC Rees-Start. All rights reserved.
+            &copy; 2026 PC Rees-Start IT Consulting. All rights reserved.
         </p>
     </footer>
 
